@@ -10,28 +10,17 @@ public class ReplaceSpace2 {
         int num = getCharNum(old, ' ');
         //先确定数组长度
         char[] newC = new char[old.length + 2*num];
-        //记录哪儿需要复制
+        //记录哪儿开始复制
         int end = newC.length-1;
-        //新数组从后往前计数，记录到已经复制到哪
-        int begin = old.length-1;
-        //从后往前
         for (int i = old.length-1; i >= 0 ; i--) {
+            //一个一个复制过去
             if (old[i] == ' ') {
-                //后方移后
-                for (int j = begin; j > i; j--) {
-                    newC[end--] = old[j];
-                }
-                begin = i-1;
                 //替换
                 newC[end--]= '0';
                 newC[end--]= '2';
                 newC[end--]= '%';
-            }
-        }
-        //还有剩余
-        if (begin != 0) {
-            for (int i = 0; i <= begin; i++) {
-                newC[i] = old[i];
+            } else {
+                newC[end--] = old[i];
             }
         }
         return new String(newC);
