@@ -5,7 +5,7 @@ package SwordOffer;
  *
  * 从左下角开始形式二分
  */
-public class ReplaceSpace1 {
+public class SearchIn2DArray1 {
     public boolean Find(int target, int [][] array) {
         int y = array.length-1;
         int x = 0;
@@ -24,7 +24,7 @@ public class ReplaceSpace1 {
 
     public static void main(String[] args) {
         int[][] a= {{1,2,8,9},{2,4,9,12},{4,7,10,13},{6,8,11,15}};
-        ReplaceSpace1 t = new ReplaceSpace1();
+        SearchIn2DArray1 t = new SearchIn2DArray1();
         System.out.println(t.Find(7, a));
     }
 }
