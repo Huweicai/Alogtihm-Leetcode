@@ -119,9 +119,27 @@ public class SortAlgorithm {
         return a;
     }
 
-    private static void qsort(int[] a, int low, int end) {
+    private static void qsort(int[] a, int min, int max) {
         //选区最左为基准值
-        int base = a[low];
+        int base = a[min];
+        //前后指针同时从两边出发
+        int start = min +1;
+        int end = max;
+        while (start < end) {
+            //从左往右找到第一个比base大的数，如果小于就一直循环直到找到第一个比它大的数或者前后指针相碰
+            while (a[start] < base) {
+
+            }
+            //从右往左找到第一个比base小的数，如果大于就一直循环直到找到一个比它小的数或者前后指针相碰
+            while (a[start] < base) {
+
+            }
+            if (start < end) {
+                //交换它们
+            } else {
+                //将base放到中间来
+            }
+        }
     }
 
     public static void main(String[] args) {
